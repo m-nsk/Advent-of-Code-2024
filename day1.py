@@ -31,13 +31,13 @@ for line in input:
     l1.append(int(nums[0]))
     l2.append(int(nums[1]))
 
-# l2_count = defaultdict(int)
-# for num in l2:
-#     l2_count[num] += 1
+l2_count = defaultdict(int)
+for num in l2:
+    l2_count[num] += 1
 
 total = 0
 
 for num in l1:
-    total += num * l2.count(num)
+    total += num * l2_count[num]
 
 print(f"Part two: {total}")
